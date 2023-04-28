@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+}
+
+.header {
+  margin: 20px 30px 180px;
+  color: hsl(0, 0%, 8%);
+  display: flex;
+}
+.header__img {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.header__list {
+  display: flex;
+  width: 100%;
+  margin-left: 100px;
+}
+.header__select {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.header__select img {
+  margin-right: 10px;
+}
+.header__select ul {
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.header__select ul.submenu {
+  display: none;
+  position: absolute;
+  margin-top: 20px;
+}
+.header__select li {
+  list-style: none;
+  padding: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.header__select .gray {
+  color: hsl(0, 0%, 41%);
+  font-weight: 200;
+}
+.header__login {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-weight: 700;
+  justify-content: end;
+}
+.header__login ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+}
+.header__login ul li {
+  list-style: none;
+  cursor: pointer;
+}
+.header__login ul li button {
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 98%);
+  cursor: pointer;
+  font-weight: 700;
+  font-family: "Epilogue", sans-serif;
+}
+.header a {
+  text-decoration: none;
+  color: hsl(0, 0%, 8%);
+  font-weight: 700;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 80vh;
+  padding: 0 8%;
+}
+.main__info {
+  width: 50%;
+}
+.main__title {
+  font-size: 6vw;
+  font-weight: 700;
+  color: hsl(0, 0%, 8%);
+  text-align: start;
+  padding-bottom: 30px;
+}
+.main__subtitle {
+  color: hsl(0, 0%, 41%);
+  padding-bottom: 40px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.main__button {
+  padding: 18px;
+  background-color: hsl(0, 0%, 8%);
+  font-size: 18px;
+  color: hsl(0, 0%, 98%);
+  border: none;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 100px;
+}
+.main__button:hover {
+  background-color: hsl(0, 0%, 41%);
+  color: hsl(0, 0%, 98%);
+}
+.main__clients {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.main__imagePrincipal {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__imagePrincipal img {
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+}
+
+/*# sourceMappingURL=style.css.map */
