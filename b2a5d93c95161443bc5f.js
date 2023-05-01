@@ -1,0 +1,1 @@
+var timeOut,menuItems=document.querySelectorAll(".header__select > li");menuItems.forEach((function(e){if(e.classList.contains("header__select--dropdown")){var t=e.querySelector(".submenu");e.addEventListener("mouseenter",(function(){t.style.display="block"})),e.addEventListener("mouseleave",(function(){t.style.display="none"}))}}));
