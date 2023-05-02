@@ -103,6 +103,9 @@ body {
   height: 80vh;
   padding: 0 6%;
 }
+.main__saltoLinea {
+  display: none;
+}
 .main__navBarMobile, .main__navBarMobile2 {
   display: none;
 }
@@ -164,6 +167,9 @@ body {
 @media screen and (min-width: 630px) and (max-width: 980px) {
   .header__list {
     display: none !important;
+  }
+  .main__saltoLinea {
+    display: none;
   }
   .main__clients {
     margin: 0px 10px !important;

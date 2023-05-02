@@ -114,6 +114,10 @@ body {
   height: 80vh;
   padding: 0 6%;
 
+  &__saltoLinea {
+    display: none;
+  }
+
   &__navBarMobile,
   &__navBarMobile2 {
     display: none;
@@ -186,6 +190,9 @@ body {
   }
 
   .main {
+    &__saltoLinea {
+      display: none;
+    }
     &__clients {
       margin: 0px 10px !important;
       width: fit-content;
