@@ -18,7 +18,7 @@ body {
   display: flex;
 }
 .header__menuResponsive {
-  display: none;
+  display: none !important;
 }
 .header__img {
   display: flex;
@@ -47,8 +47,9 @@ body {
 }
 .header__select ul.submenu {
   display: none;
+  margin-left: 30px;
   position: absolute;
-  margin-top: 20px;
+  margin-top: 8px;
 }
 .header__select li {
   list-style: none;
@@ -101,7 +102,13 @@ body {
   gap: 30px;
   width: 100%;
   height: 80vh;
-  padding: 0 8%;
+  padding: 0 4.4%;
+}
+.main__saltoLinea {
+  display: none;
+}
+.main__navBarMobile, .main__navBarMobile2 {
+  display: none;
 }
 .main__info {
   width: 50%;
@@ -130,11 +137,12 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 .main__button:hover {
-  background-color: hsl(0, 0%, 41%);
-  color: hsl(0, 0%, 98%);
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 .main__clients {
   display: flex;
@@ -151,21 +159,46 @@ body {
 .main__imagePrincipal1 {
   width: 100%;
   height: 90%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .main__imagePrincipal2 {
   display: none;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (min-width: 630px) and (max-width: 980px) {
+  .header__list {
+    display: none !important;
+  }
+  .main__saltoLinea {
+    display: none;
+  }
+  .main__clients {
+    margin: 0px 10px !important;
+    width: fit-content;
+    gap: 15px;
+  }
+  .main__clients figure {
+    margin: 0px !important;
+    width: 65px !important;
+  }
+  .main__clients figure img {
+    width: 100% !important;
+    object-fit: contain;
+  }
+  .main__navBarMobile, .main__navBarMobile2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 630px) {
   .header {
-    padding: 40px 60px 20px;
+    padding: 20px 40px;
   }
   .header__img {
     justify-content: space-between;
   }
   .header__menuResponsive {
-    display: block;
+    display: block !important;
+    cursor: pointer;
   }
   .header__select, .header__login {
     display: none;
@@ -174,16 +207,123 @@ body {
     margin: 0px;
     width: fit-content;
   }
+  .header__listMobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .header__selectMobile {
+    padding-top: 80px;
+    padding-left: 30px;
+    padding: 80px 0px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+  }
+  .header__selectMobile img {
+    margin-right: 10px;
+  }
+  .header__selectMobile ul {
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+  .header__selectMobile ul.submenuMobile {
+    display: none;
+  }
+  .header__selectMobile li {
+    list-style: none;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    color: hsl(0, 0%, 41%);
+  }
+  .header__selectMobile .grayMobile {
+    color: hsl(0, 0%, 41%);
+    font-weight: 200;
+  }
+  .header__loginMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 700;
+    justify-content: center;
+    color: hsl(0, 0%, 41%);
+  }
+  .header__loginMobile ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .header__loginMobile ul li {
+    list-style: none;
+    cursor: pointer;
+  }
+  .header__loginMobile ul li button {
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%, 41%);
+    background-color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: "Epilogue", sans-serif;
+    color: hsl(0, 0%, 41%);
+  }
+  .header__loginMobile ul li button:hover {
+    background-color: black;
+    color: hsl(0, 0%, 98%);
+  }
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(0, 0%, 41%);
+  }
+  .navBarMobileClose {
+    padding-top: 30px;
+    padding-left: 80%;
+    cursor: pointer;
+  }
   .main {
     flex-direction: column;
     padding: 0;
   }
+  .main__saltoLinea {
+    display: block;
+  }
+  .main__navBarMobile {
+    height: 100vh;
+    width: 66%;
+    z-index: 1;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+  }
+  .main__navBarMobile2 {
+    height: 100vh;
+    width: 34%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
   .main__info {
     order: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .main__imagePrincipal {
     width: 100%;
-    height: 50vh;
+    height: 40vh;
   }
   .main__imagePrincipal1 {
     display: none;
@@ -192,6 +332,39 @@ body {
     display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+  }
+  .main__title {
+    display: none;
+  }
+  .main__saltoLinea {
+    font-size: 8vw;
+    font-weight: 700;
+    color: hsl(0, 0%, 8%);
+    text-align: center;
+    padding-bottom: 30px;
+    margin: 0px !important;
+  }
+  .main__subtitle {
+    text-align: center;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .main__button {
+    margin-bottom: 40px;
+  }
+  .main__clients {
+    margin: 0px 10px !important;
+    width: fit-content;
+    gap: 15px;
+  }
+  .main__clients figure {
+    margin: 0px !important;
+    width: 65px !important;
+  }
+  .main__clients figure img {
+    width: 100% !important;
     object-fit: contain;
   }
 }
