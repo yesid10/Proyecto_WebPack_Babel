@@ -3,7 +3,6 @@ const menuItems2 = document.querySelectorAll(".header__selectMobile > li");
 let timeOut;
 
 menuItems.forEach((item) => {
-  console.log(item.classList);
   if (item.classList.contains("header__select--dropdown")) {
     const submenu = item.querySelector(".submenu");
     item.addEventListener("mouseenter", () => {
@@ -17,7 +16,6 @@ menuItems.forEach((item) => {
 });
 
 menuItems2.forEach((item) => {
-  console.log(item.classList);
   if (item.classList.contains("header__select--dropdownMobile")) {
     const submenu = item.querySelector(".submenuMobile");
     item.addEventListener("mouseenter", () => {
