@@ -9,9 +9,13 @@ body {
 }
 
 .header {
-  margin: 20px 30px 180px;
+  padding: 40px 80px 60px;
   color: $Almost-Black;
   display: flex;
+
+  &__menuResponsive {
+    display: none !important;
+  }
 
   &__img {
     display: flex;
@@ -21,10 +25,10 @@ body {
 
   &__list {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     margin-left: 100px;
   }
-
 
   &__select {
     display: flex;
@@ -46,7 +50,7 @@ body {
       border-radius: 10px;
       padding: 20px;
       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     }
 
     li {
@@ -68,6 +72,7 @@ body {
     gap: 20px;
     font-weight: 700;
     justify-content: end;
+    color: $Medium-Gray;
 
     ul {
       display: flex;
@@ -82,10 +87,12 @@ body {
         button {
           padding: 10px 15px 10px 15px;
           border-radius: 10px;
+          border: 1px solid $Medium-Gray;
           background-color: $Almost-White;
           cursor: pointer;
           font-weight: 700;
           font-family: $font-primary;
+          color: $Medium-Gray;
         }
       }
     }
@@ -105,8 +112,8 @@ body {
   gap: 30px;
   width: 100%;
   height: 80vh;
-  padding: 0 8%;
-  
+  padding: 0 6%;
+
   &__info {
     width: 50%;
   }
@@ -135,8 +142,9 @@ body {
     margin-bottom: 100px;
 
     &:hover {
-      background-color: $Medium-Gray;
-      color: $Almost-White;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
     }
   }
 
@@ -153,10 +161,237 @@ body {
     justify-content: center;
     align-items: center;
 
-    img {
+    &1 {
       width: 100%;
       height: 90%;
-      object-fit: contain;
+      object-fit: cover;
+    }
+
+    &2 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 630px) and (max-width: 980px) {
+  .header {
+    &__list {
+      display: none !important;
+    }
+  }
+
+  .main {
+    &__clients {
+      margin: 0px 10px !important;
+      width: fit-content;
+      gap: 15px;
+      figure {
+        margin: 0px !important;
+        width: 65px !important;
+
+        img {
+          width: 100% !important;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .header {
+    padding: 20px 40px;
+    &__img {
+      justify-content: space-between;
+    }
+    &__menuResponsive {
+      display: block !important;
+      cursor: pointer;
+    }
+    &__select,
+    &__login {
+      display: none;
+    }
+    &__list {
+      margin: 0px;
+      width: fit-content;
+    }
+    &__listMobile {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    &__selectMobile {
+      padding-top: 80px;
+      padding-left: 30px;
+      padding: 80px 0px 30px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      list-style: none;
+
+      img {
+        margin-right: 10px;
+      }
+
+      ul {
+        &.submenuMobile {
+          display: none;
+        }
+
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+          rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      }
+
+      li {
+        list-style: none;
+        padding: 8px;
+        cursor: pointer;
+        font-weight: 700;
+        color: $Medium-Gray;
+      }
+
+      .grayMobile {
+        color: $Medium-Gray;
+        font-weight: 200;
+      }
+    }
+    &__loginMobile {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-weight: 700;
+      justify-content: center;
+      color: $Medium-Gray;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+
+        li {
+          list-style: none;
+          cursor: pointer;
+
+          button {
+            padding: 10px 15px 10px 15px;
+            border-radius: 10px;
+            border: 1px solid $Medium-Gray;
+            background-color: white;
+            cursor: pointer;
+            font-weight: 700;
+            font-family: $font-primary;
+            color: $Medium-Gray;
+          }
+
+          button:hover {
+            background-color: black;
+            color: $Almost-White;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    color: $Medium-Gray;
+  }
+
+  .navBarMobileClose {
+    padding-top: 30px;
+    padding-left: 80%;
+    cursor: pointer;
+  }
+
+  .main {
+    flex-direction: column;
+    padding: 0;
+    &__navBarMobile {
+      height: 100vh;
+      width: 66%;
+      z-index: 1;
+      background-color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: none;
+    }
+    &__navBarMobile2 {
+      height: 100vh;
+      width: 34%;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+    &__info {
+      order: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__imagePrincipal {
+      width: 100%;
+      height: 40vh;
+
+      &1 {
+        display: none;
+      }
+      &2 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__saltoLinea {
+      font-size: 8vw;
+      font-weight: $font-weight-primary;
+      color: $Almost-Black;
+      text-align: center;
+      padding-bottom: 30px;
+      margin: 0px !important;
+    }
+
+    &__subtitle {
+      text-align: center;
+      font-size: 13px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &__button {
+      margin-bottom: 40px;
+    }
+
+    &__clients {
+      margin: 0px 10px !important;
+      width: fit-content;
+      gap: 15px;
+      figure {
+        margin: 0px !important;
+        width: 65px !important;
+
+        img {
+          width: 100% !important;
+          object-fit: contain;
+        }
+      }
     }
   }
 }

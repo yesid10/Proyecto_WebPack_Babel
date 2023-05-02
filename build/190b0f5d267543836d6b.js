@@ -1,0 +1,1 @@
+var menuItems=document.querySelectorAll(".header__select > li");menuItems.forEach((function(e){var n=e.querySelector(".submenu");e.addEventListener("mouseenter",(function(){n.style.display="block"})),e.addEventListener("mouseleave",(function(){n.style.display="none"}))}));
