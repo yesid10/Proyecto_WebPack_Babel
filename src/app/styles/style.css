@@ -103,6 +103,9 @@ body {
   height: 80vh;
   padding: 0 6%;
 }
+.main__navBarMobile, .main__navBarMobile2 {
+  display: none;
+}
 .main__info {
   width: 50%;
 }
@@ -174,6 +177,9 @@ body {
   .main__clients figure img {
     width: 100% !important;
     object-fit: contain;
+  }
+  .main__navBarMobile, .main__navBarMobile2 {
+    display: none;
   }
 }
 @media screen and (max-width: 630px) {

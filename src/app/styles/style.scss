@@ -114,6 +114,11 @@ body {
   height: 80vh;
   padding: 0 6%;
 
+  &__navBarMobile,
+  &__navBarMobile2 {
+    display: none;
+  }
+
   &__info {
     width: 50%;
   }
@@ -194,6 +199,10 @@ body {
           object-fit: contain;
         }
       }
+    }
+    &__navBarMobile,
+    &__navBarMobile2 {
+      display: none;
     }
   }
 }
